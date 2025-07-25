@@ -323,9 +323,11 @@ export default function Navbar() {
   return (
     <Box sx={{ 
       padding: 2, 
-      backgroundColor: '#f5f5f5', 
-      minHeight: '100vh',
-      width: '300px'
+      backgroundColor: '#fffdf4ff', 
+      minHeight: '100%',
+      height: '100vh'
+      
+      
     }}>
       <Typography variant="h6" gutterBottom sx={{ mb: 3 }}>
         File Navigation
@@ -360,10 +362,6 @@ export default function Navbar() {
           <EditIcon fontSize="small" />
           Edit
         </MenuItem>
-        <MenuItem onClick={() => handleMenuAction('Delete')}>
-          <DeleteIcon fontSize="small" />
-          Delete
-        </MenuItem>
         <MenuItem onClick={() => handleMenuAction('Add Folder')}>
           <CreateNewFolderIcon fontSize="small" />
           Add Folder
@@ -379,6 +377,10 @@ export default function Navbar() {
         <MenuItem onClick={() => handleMenuAction('Add Scedule')}>
           <CalendarMonthIcon  fontSize="small" />
           New Scedule
+        </MenuItem>
+        <MenuItem onClick={() => handleMenuAction('Delete')}>
+          <DeleteIcon fontSize="small" />
+          Delete
         </MenuItem>
       </Menu>
       

@@ -52,24 +52,13 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ padding: 2, backgroundColor: '#680909ff' }}>
+    <Box sx={{ padding: 2, backgroundColor: '#680909ff', minHeight: '100%'}}>
       <Typography variant="h6" gutterBottom>
         Navigation
       </Typography>
       <FileExplorer onContextMenu={handleContextMenu} />
 
-      {/* Context Menu with action buttons */}
-      <Menu
-        open={Boolean(anchorPosition)}
-        onClose={handleClose}
-        anchorReference="anchorPosition"
-        anchorPosition={
-          anchorPosition !== null
-            ? { top: anchorPosition.mouseY, left: anchorPosition.mouseX }
-            : undefined
-        }
-      >
-      </Menu>
+
     </Box>
   );
 }
